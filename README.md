@@ -33,7 +33,7 @@ The detection identifies source IP addresses with five or more failed SSH login 
 ### SPL Query
 
 ```spl
-"Failed password"
+index=main "Failed password"
 | rex "from (?<src_ip>\d{1,3}(?:\.\d{1,3}){3})"
 | stats count as failed_attempts by src_ip
 | where failed_attempts >= 5
@@ -121,3 +121,17 @@ The IP addresses and failed login attempts are test data and do not represent re
 - Develop additional detection rules.
 - Improve alert notification workflows.
 - Expand the SOC monitoring dashboard.
+
+
+## Sample Logs
+
+This project includes simulated Linux SSH authentication logs:
+
+- `auth_bruteforce.log` — Original SSH brute-force sample log.
+- `auth_bruteforce_test.log` — Test logs containing 8 failed SSH login attempts from 192.168.56.30.
+
+These logs are used to test and validate the Splunk detection query.
+
+## Project Repository
+
+GitHub: https://github.com/sulthanRaziek/Splunk-SOC-SSH-Brute-Force-Detection
