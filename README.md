@@ -86,7 +86,8 @@ Alert name: `SOC - SSH Brute Force Detection`
 
 ### 1. Monitoring Dashboard
 
-![Splunk Dashboard](screenshots/01-splunk-dashboard.png)
+![Splunk Dashboard](screenshots/01-splunk-dashboard.png)![Uploading 01-splunk-dashboard.png…]()
+
 
 ### 2. Triggered Alert
 
